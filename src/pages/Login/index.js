@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import '../Login/styles.css';
 import Input from '../components/mask-cpf';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
+import api from "../../services/api";
+import LoginMobile from './LoginMobile';
 
 const initialValues = {
     cpf: '',
@@ -9,7 +11,15 @@ const initialValues = {
   };
 
 export default function Login(){
+    const width = window.innerWidth;
+    // The width below which the mobile view should be rendered
+    const breakpoint = 620;
 
+    console.log(width);
+    const history = useHistory();
+
+    const [cpf, setCPF] = useState("");
+    const [senha, setSenha] = useState("");
     const [values, setValues] = useState(initialValues);
 
     function handleChange(event) {
@@ -17,9 +27,32 @@ export default function Login(){
         ...values,
         [event.target.name]: event.target.value
         });
+
+        setCPF(values.cpf);
     }
 
-    return (
+    async function handleLogin(e) {
+        e.preventDefault();
+        const data = {
+            cpf,
+            senha,
+        }
+
+        console.log(data);
+
+        try{
+            const response = await api.post('/sessions', data);
+            localStorage.setItem('id', response.data.id);
+            localStorage.setItem('cpf', cpf);
+
+            history.push('/sale');
+
+        }catch(err){
+            alert("err");
+        }
+    }
+
+    return width < breakpoint ? <LoginMobile/> : ( 
         <div className="login-container">
             <section className="formLogin">
  
@@ -28,7 +61,7 @@ export default function Login(){
                     <p className="title-register">Ainda não tem conta? <br/><Link to="/register">Clique aqui!</Link></p>
                 </div>
 
-                <form>
+                <form onSubmit={handleLogin}>
                     <h1>LOGIN</h1>
                     <Input
                         name="cpf"
@@ -36,7 +69,7 @@ export default function Login(){
                         value={values.cpf}
                         onChange={handleChange}
                     />
-                    <input placeholder="Senha" type="password"/>
+                    <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
                     <input type="submit" value="Entrar"/>
                 </form>
             </section>

@@ -1,0 +1,67 @@
+h1{
+    color: blueviolet;
+}
+.loginMobile-container{
+    display: flex;
+    justify-content: center;
+    transform: scale(0.9);
+}
+
+.formLogin{
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+}
+
+.fieldPass{
+    border-color: red;
+    color: rgb(148, 21, 21);
+}
+.card-img .title{
+    color: white;
+    font-size: 35px;
+    line-height: 31px;
+    align-self: center;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+.card-img .title-register{
+    align-self: center;
+    font-size: 16px;
+    line-height: 112.9%;
+    color: rgb(245, 245, 245);
+    margin-bottom: 50px;
+
+}
+
+.card-img a{
+    align-self: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 112.9%;
+    color: rgb(148, 21, 21);
+    cursor: pointer;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.formLogin form{
+    background-color: rgb(241, 241, 241);
+    height: 500px;
+    width: 350px;
+    border-radius: 8px 8px 8px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 43px;
+    color: #981E1E;
+    bottom: 50px;
+    position: relative;
+}

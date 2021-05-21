@@ -1,9 +1,41 @@
 import './styles.css';
-import { Link } from 'react-router-dom';
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { FiLogOut } from 'react-icons/fi';
+import Historic from '../components/Historic';
+
+import api from '../../services/api';
 
 export default function Sale() {
+
+    const [gifts, setGift] = useState([]);
+    const [valor, setValor] = useState([]);
+
+    useEffect(() => {
+        api.get('/gift')
+        .then(response =>{
+            setGift(response.data);
+        })
+    }, [])
+
+
+    function handleBid(e, idGift, valorAtual){
+        e.preventDefault();
+   
+        const data = {
+            valor,
+            idGift
+        }
+
+        console.log(data);
+        api.post('/bid', data,{
+            headers: {
+              'Authorization': `${localStorage.getItem('id')}` 
+            }})
+        .then(response =>{
+            console.log(response.data);
+        })
+
+    }
 
     return (
         <div className="sale-container">
@@ -14,103 +46,27 @@ export default function Sale() {
             </header>
 
             <div className="card-container">
-                <div className="card-profile">
+              {gifts.map(gift => (
+                    <div className="card-profile" >
                     <div className="gift">
                         <div className="img"></div>
                         <div className="info">
-                            <h1 title="Carneiro">Carneiro</h1>
-                            <form>
+                            <h1 title="Carneiro">{gift.nome}</h1>
+                            <form onSubmit={e => handleBid(e, gift.id)}>
                                 <div className="inputGroup">
-                                    <input placeholder="R$ 00,00" type="number" />
+                                    <input placeholder="R$ 00,00" type="number" key={gift.id}  value={valor} onChange={e => setValor(e.target.value)}/>
                                     <input value="arrematar" type="submit" />
                                 </div>
                             </form>
                         </div>
                     </div>
-                    <div className="historic">
-                        <h2>LANCES</h2>
-                        <table>
-                            <tr className="cabecalhoTR">
-                                <td>Nome</td>
-                                <td>Valor</td>
-                            </tr>
-                            <tbody>
-                                <tr className="lances">
-                                    <td>Tiago</td>
-                                    <td>R$ 200,00</td>
-                                </tr>
-                                <tr className="lances">
-                                    <td>Tiago</td>
-                                    <td>R$ 200,00</td>
-                                </tr>
-                                <tr className="lances">
-                                    <td>Tiago</td>
-                                    <td>R$ 200,00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div className="card-profile">
-                    <div className="gift">
-                        <div className="img"></div>
-                        <div className="info">
-                            <h1 title="Carneiro">Carneiro</h1>
-                            <form>
-                                <div className="inputGroup">
-                                    <input placeholder="R$ 00,00" type="number" />
-                                    <input value="arrematar" type="submit" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div className="historic">
-                        <h2>LANCES</h2>
-                        <table>
-                            <tr className="cabecalhoTR">
-                                <td>Nome</td>
-                                <td>Valor</td>
-                            </tr>
-                            <tbody>
-                                <tr className="lances">
-                                    <td>Tiago</td>
-                                    <td>R$ 200,00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div className="card-profile">
-                    <div className="gift">
-                        <div className="img"></div>
-                        <div className="info">
-                            <h1 title="Carneiro">Carneiro</h1>
-                            <form>
-                                <div className="inputGroup">
-                                    <input placeholder="R$ 00,00" type="number" />
-                                    <input value="arrematar" type="submit" />
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div className="historic">
-                        <h2>LANCES</h2>
-                        <table>
-                            <tr className="cabecalhoTR">
-                                <td>Nome</td>
-                                <td>Valor</td>
-                            </tr>
-                            <tbody>
-                                <tr className="lances">
-                                    <td>Tiago</td>
-                                    <td>R$ 200,00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+
+                    <Historic id={gift.id}/>
                 </div>
 
+              ))}
 
+              
             </div>
         </div>
     );
