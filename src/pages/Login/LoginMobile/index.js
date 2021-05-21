@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './styles.css';
 import Input from '../../components/mask-cpf';
-import {Link, useHistory} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 import api from "../../../services/api";
 
 const initialValues = {
@@ -12,7 +12,7 @@ const initialValues = {
 export default function LoginMobile(){
     const width = window.innerWidth;
     // The width below which the mobile view should be rendered
-    const breakpoint = 620;
+    //const breakpoint = 620;
 
     console.log(width);
     const history = useHistory();
