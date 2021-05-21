@@ -51,7 +51,7 @@ export default function Sale() {
                         </table>
                     </div>
                 </div>
-                {/* <div className="card-profile">
+                <div className="card-profile">
                     <div className="gift">
                         <div className="img"></div>
                         <div className="info">
@@ -108,7 +108,7 @@ export default function Sale() {
                             </tbody>
                         </table>
                     </div>
-                </div> */}
+                </div>
 
 
             </div>

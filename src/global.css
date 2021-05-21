@@ -8,7 +8,8 @@
 
 body{
     font: 500 14px Montserrat, sans-serif;
-    background: linear-gradient(to right, #B32020 0%, #1D0000 0.01%, #650202 99.63%); 
+    background:  url('../src/assets/bg.jpg');
+    background-size: cover; 
     -webkit-font-smoothing: antialiased;
 }
 
