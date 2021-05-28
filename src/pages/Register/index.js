@@ -38,7 +38,7 @@ export default function Login(){
         }
 
         try{
-            const response = await api.post('/user', data);
+            await api.post('/user', data);
             history.push('/');
         }
         catch (err){

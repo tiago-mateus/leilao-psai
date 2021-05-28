@@ -16,7 +16,7 @@ export default function Historic({id}){
         }, 150);
 
 
-    }, [])
+    }, [id])
 
 
     return(
