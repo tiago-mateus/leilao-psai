@@ -32,13 +32,13 @@
 
 .gift{
     margin-top: 10px;
-    z-index: 99999;
+    z-index: 9999 !important;
 }
 
 .gift .img{
     overflow: hidden;
-    width: 281px;
-    height: 166px;
+    width: 240px !important;
+    height: 165px !important;
     border-radius: 8px 8px 0px 0px;
     background: linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url('../../assets/sanduiche.jpg');
     background-size: cover;
@@ -46,8 +46,8 @@
 }
 .gift .info{
     display: flex;
-    width: 281px;
-    height: 170px;
+    width: 240px !important;
+    height: 170px !important;
     background: #FFFFFF;
     border-radius: 0px 0px 10px 10px;
     justify-content: center;
@@ -83,6 +83,7 @@
     position: relative;
     height: 321px;
     top: 17px;
+    width: 230px;
     background: linear-gradient(180deg, #F2F2F2 0%, #FFFFFF 100%);
     box-shadow: 4px 6px 27px rgba(0, 0, 0, 0.09);
     border-radius: 0px  9px  9px  0px;

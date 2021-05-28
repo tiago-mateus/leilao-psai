@@ -8,8 +8,7 @@
 
 body{
     font: 500 14px Montserrat, sans-serif;
-    background:  url('../src/assets/bg.jpg');
-    background-size: cover; 
+    background:  #2f0000;
     -webkit-font-smoothing: antialiased;
 }
 

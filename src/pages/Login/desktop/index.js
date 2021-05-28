@@ -6,15 +6,9 @@ import api from "../../../services/api";
 
 const initialValues = {
     cpf: '',
-    cnpj: ''
   };
 
-export default function LoginMobile(){
-    const width = window.innerWidth;
-    // The width below which the mobile view should be rendered
-    const breakpoint = 620;
-
-    console.log(width);
+export default function Login(){
     const history = useHistory();
 
     const [cpf, setCPF] = useState("");
@@ -37,7 +31,6 @@ export default function LoginMobile(){
             senha,
         }
 
-        console.log(data);
 
         try{
             const response = await api.post('/sessions', data);
@@ -52,28 +45,27 @@ export default function LoginMobile(){
     }
 
     return (
-    <div className="loginMobile-container">
-    <section className="formLogin">
-{/* 
-        <div className="card-img">
-            <p className="title"><strong>Seja<br/><em>Bem-vindo</em></strong></p>
-            <p className="title-register">Ainda não tem conta? <br/><Link to="/register">Clique aqui!</Link></p>
-        </div> */}
+        <div className="login-container">
+            <section className="formLogin">
+ 
+                <div className="card-img">
+                    <p className="title"><strong>Seja<br/><em>Bem-vindo</em></strong></p>
+                    <p className="title-register">Ainda não tem conta? <br/><Link to="/register">Clique aqui!</Link></p>
+                </div>
 
-        <form onSubmit={handleLogin}>
-            <h1>LOGIN</h1>
-            <Input
-                name="cpf"
-                mask="999.999.999-99"
-                value={values.cpf}
-                onChange={handleChange}
-            />
-            <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
-            <input type="submit" value="Entrar"/>
-        </form>
-    </section>
+                <form onSubmit={handleLogin}>
+                    <h1>LOGIN</h1>
+                    <Input
+                        name="cpf"
+                        mask="999.999.999-99"
+                        value={values.cpf}
+                        onChange={handleChange}
+                    />
+                    <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
+                    <input type="submit" value="Entrar"/>
+                </form>
+            </section>
 
-</div>
-        
+        </div>
     );
 }

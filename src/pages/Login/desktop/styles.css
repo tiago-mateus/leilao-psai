@@ -1,10 +1,9 @@
 h1{
     color: blueviolet;
 }
-.loginMobile-container{
+.login-container{
     display: flex;
     justify-content: center;
-    transform: scale(0.9);
 }
 
 .formLogin{
@@ -12,7 +11,19 @@ h1{
     flex-direction: row;
     margin-top: 150px;
 }
+.card-img{
+    overflow: hidden;
+    border-radius: 8px 0px 0px 8px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 0, 0, 0.4) 0.01%, #1F0000 100%);
+    background-size: cover;
+    background-color: white;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 
+}
 .fieldPass{
     border-color: red;
     color: rgb(148, 21, 21);
@@ -49,7 +60,7 @@ h1{
     background-color: rgb(241, 241, 241);
     height: 500px;
     width: 350px;
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 0px 8px 8px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;

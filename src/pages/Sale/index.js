@@ -2,6 +2,7 @@ import './styles.css';
 import React, {useEffect, useState} from "react";
 import { FiLogOut } from 'react-icons/fi';
 import Historic from '../components/Historic';
+import swal from 'sweetalert';
 
 import api from '../../services/api';
 
@@ -17,23 +18,21 @@ export default function Sale() {
         })
     }, [])
 
-
     function handleBid(e, idGift, valorAtual){
         e.preventDefault();
-   
-        const data = {
-            valor,
-            idGift
-        }
 
-        console.log(data);
-        api.post('/bid', data,{
-            headers: {
-              'Authorization': `${localStorage.getItem('id')}` 
-            }})
-        .then(response =>{
+        api.get('/maxBid/'+idGift).then(response =>{
             console.log(response.data);
+            if(valor > parseInt(response.data)){
+
+                const data = {valor,idGift}
+                api.post('/bid', data,{
+                    headers: {
+                      'Authorization': `${localStorage.getItem('id')}` 
+                    }})
+            }    
         })
+       
 
     }
 

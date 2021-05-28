@@ -11,10 +11,9 @@ export default function Historic({id}){
             api.get('historicBidsPerGift/'+id)
             .then(response =>{
                 setBids(response.data);
-                // console.log(response.data);
             })
 
-        }, 50);
+        }, 150);
 
 
     }, [])
