@@ -65,7 +65,7 @@
 
 .gift{
     margin-top: 10px;
-    z-index: 99999;
+    z-index: 999 !important;
 }
 
 .gift .img{
@@ -219,4 +219,23 @@
     text-align: left;
 }
 
+
+.modal-dialog{
+    max-width: 750px !important;
+}
+
+
+.modal-dialog .img{
+    height: 200px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    border: 3px dashed #e0e0e0
+}
+
+.modal-dialog .profile{
+    height: 100px;
+}
+.col input, .btn-cancelar ,.btn-salvar{
+    margin: 10px !important;
+}
 

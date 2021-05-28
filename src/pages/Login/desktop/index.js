@@ -30,14 +30,14 @@ export default function Login(){
             cpf,
             senha,
         }
-
+        history.push('/admin');
 
         try{
             const response = await api.post('/sessions', data);
             localStorage.setItem('id', response.data.id);
             localStorage.setItem('cpf', cpf);
 
-            history.push('/sale');
+      
 
         }catch(err){
             alert("err");
