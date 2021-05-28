@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import './styles.css';
 import Input from '../../components/mask-cpf';
-import {useHistory} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 import api from "../../../services/api";
 
 const initialValues = {

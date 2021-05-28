@@ -2,7 +2,6 @@ import './styles.css';
 import React, {useEffect, useState} from "react";
 import { FiLogOut } from 'react-icons/fi';
 import Historic from '../components/Historic';
-import swal from 'sweetalert';
 
 import api from '../../services/api';
 
