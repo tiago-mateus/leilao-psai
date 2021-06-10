@@ -89,7 +89,7 @@ export default function Login(){
                         /> */}
 
                         <input className="cpf" placeholder="CPF" type="text" value={cpf} onChange={e => setCPF(e.target.value)} required/>
-                        <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} required/>
+                        <input placeholder="senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} required/>
                         <input type="submit" value="Entrar"/>
                     </form>
                     </Col>
