@@ -1,4 +1,6 @@
-
+body{
+    background:  #2f0000;
+}
 .admin-container{
     width: 100%;
     max-width: 1080px;

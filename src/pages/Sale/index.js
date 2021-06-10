@@ -4,8 +4,25 @@ import { FiLogOut } from 'react-icons/fi';
 import Historic from '../components/Historic';
 import swal from 'sweetalert';
 import api from '../../services/api';
+import {useHistory} from 'react-router-dom';
+
 
 export default function Sale() {
+    const history = useHistory();
+
+
+    function sair(e){
+        e.preventDefault();
+        localStorage.removeItem("id");
+        localStorage.removeItem("cpf");
+        history.push("/")
+    }
+
+
+    if(localStorage.getItem('id') == null){
+        history.push("/")
+    }
+
 
     const [gifts, setGift] = useState([]);
     const [gis, setGis] = useState([]);
@@ -66,13 +83,15 @@ export default function Sale() {
         })
 
 
+
+
     }
 
     return (
         <div className="sale-container">
             <header>
-                <button type="button">
-                    <FiLogOut size={25} color="white" />
+                <button type="button"  onClick={e => sair(e)}>
+                    <FiLogOut size={25} color="white"/>
                 </button>
             </header>
 

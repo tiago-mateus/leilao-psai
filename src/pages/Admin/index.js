@@ -1,5 +1,5 @@
 import './styles.css';
-import './admin.css';
+import {useHistory} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { FiLogOut, FiUsers } from 'react-icons/fi';
@@ -11,6 +11,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ButtonLeiloando from '../components/ButtonLeiloando';
 
 export default function Admin() {
+    const history = useHistory();
+
+
+    function sair(e){
+        e.preventDefault();
+        localStorage.removeItem("id");
+        localStorage.removeItem("cpf");
+        history.push("/")
+    }
+
+
+    if(localStorage.getItem('id') == null && localStorage.getItem('id') != "adm123" && localStorage.getItem('id') != "0000"){
+        history.push("/")
+    }
 
     const [gifts, setGift] = useState([]);
     const [gis, setGis] = useState([]);
@@ -172,7 +186,7 @@ export default function Admin() {
             <header>
                 <Button className="btn-cadastrar-prenda" onClick={e => handleShow(e, null, null, null)} >Cadastrar prenda</Button>
                 <Link className="btn-users" to="/live" ><FiUsers size={25} color="white" /></Link>
-                <button type="button">
+                <button type="button" onClick={e=> sair(e)}>
                     <FiLogOut size={25} color="white" />
                 </button>
             </header>

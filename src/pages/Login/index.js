@@ -46,6 +46,8 @@ export default function Login(){
 
         if(cpf == "adm123" && senha == "123")
         {
+            localStorage.setItem('id', "adm123");
+            localStorage.setItem('cpf', "0000");
             history.push("/admin")
         }else{
 
