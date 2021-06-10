@@ -68,28 +68,27 @@
     z-index: 999 !important;
 }
 
-.gift .img{
-    display: flex;
-    justify-content: space-between;
-    overflow: hidden;
-    width: 281px;
-    height: 166px;
-    border-radius: 8px 8px 0px 0px;
-    background: linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url('../../assets/sanduiche.jpg');
-    background-size: cover;
-    padding: 15px;
-    padding-top: 15px;
+.admin-container .gift .img{
+    display: flex !important;
+    justify-content: space-between !important;
+    overflow: hidden !important;
+    border-radius: 8px 8px 0px 0px !important;
+    background: linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), rl('../../assets/frango-assado-em-pe.jpg') !important;
+    background-size: contain !important;
+    padding: 15px !important;
+    padding-top: 15px !important;
 }
 
 
 .gift .img a{
   margin: 0px;
   transition: 500ms;
+  margin-top: 120px;
 
 }
 
 .gift .img a:hover{
-    margin: 0px;
+    margin-top: 115px;
     transform: scale(1.1);
     transition: 500ms;
   }
@@ -131,7 +130,7 @@
 
 }
 .gift .info .inputGroup button{
-    width: 190px !important;
+    width: 190px ;
     background-color: #00AB55;
     margin-top: 5px;
     height: 40px;
@@ -149,13 +148,13 @@
 
 }
 
-.gift .info .inputGroup button + button{
+.gift .info .inputGroup .buttonarematar{
     width: 190px !important;
     background-color: #1f57aa;
     margin-bottom: 10px;
 }
 
-.gift .info .inputGroup button + button:hover{
+.gift .info .inputGroup .buttonarematar:hover{
     background-color: #194b97;
 
 }
@@ -239,3 +238,47 @@
     margin: 10px !important;
 }
 
+.container-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-button button{
+    margin: 2px;
+    width: 90px !important;
+    background-color: #a9bdb3 !important;
+}
+
+.container-button button + button{
+    background-color: brown !important;
+}
+
+.container-button button span{
+   color: rgb(76 94 85) !important;
+}
+
+
+.arrematado a{
+    color: #000000;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.arrematado + .arrematado a{
+    color: #e1e1e1;
+    pointer-events: none;
+    font-weight: unset;
+    font-style: unset;
+}
+ 
+.lances a{
+    text-decoration: none;
+}
+
+.modal-body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+    margin-top: 20px;
+}

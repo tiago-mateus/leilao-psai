@@ -2,22 +2,22 @@ import React, {useEffect, useState}from "react";
 import api from '../../services/api';
 
 export default function Historic({id}){
-    
+    let newArr = [];
+
     const [bids, setBids] = useState([]);
 
-    useEffect(() => {
 
+
+    useEffect(() => {
         setInterval(() => {
+
             api.get('historicBidsPerGift/'+id)
             .then(response =>{
                 setBids(response.data);
             })
-
-        }, 150);
-
-
+            
+        }, 500);
     }, [id])
-
 
     return(
         <div className="historic">
