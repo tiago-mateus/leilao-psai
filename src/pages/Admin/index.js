@@ -1,4 +1,5 @@
 import './styles.css';
+import './admin.css';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import { FiLogOut, FiUsers } from 'react-icons/fi';
@@ -18,7 +19,6 @@ export default function Admin() {
     const [valor, setValor] = useState();
     const [idEditar, setIdEditar] = useState();
     const [file, setFile] = useState([]);
-    let a = null;
 
     function editarPrenda(e) {
         e.preventDefault();
@@ -171,7 +171,7 @@ export default function Admin() {
         <div className="admin-container">
             <header>
                 <Button className="btn-cadastrar-prenda" onClick={e => handleShow(e, null, null, null)} >Cadastrar prenda</Button>
-                <Link className="btn-users" to="/users" ><FiUsers size={25} color="white" /></Link>
+                <Link className="btn-users" to="/live" ><FiUsers size={25} color="white" /></Link>
                 <button type="button">
                     <FiLogOut size={25} color="white" />
                 </button>
