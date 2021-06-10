@@ -158,3 +158,17 @@
     font-size: 20px;
     font-style: italic;
 }
+.card-profile form{
+    background-color: unset !important; 
+    height: 500px;
+    /* width: 350px; */
+    border-radius: 0 8px 8px 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
