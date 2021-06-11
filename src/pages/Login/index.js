@@ -76,7 +76,7 @@ export default function Login(){
 
 
     return (
-        <Container>
+        <Container className="container-login">
             <Row className="d-flex justify-content-center" style={{marginTop:100}}>
                     <Col sm={3}>
                         <div className="card-img" style={width < 640 ? {height:200, width: 350, borderTopLeftRadius: 8, borderTopRightRadius: 8, borderBottomLeftRadius:0, borderBottomRightRadius:0} : null}>
@@ -97,7 +97,7 @@ export default function Login(){
                         /> */}
 
                         <input className="cpf" placeholder="CPF" type="text" value={cpf} onChange={e => setCPF(e.target.value)} required/>
-                        <input placeholder="senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} required/>
+                        <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} required/>
                         <input type="submit" value="Entrar"/>
                     </form>
                     </Col>

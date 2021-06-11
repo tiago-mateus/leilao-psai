@@ -46,11 +46,10 @@ export default function Sale() {
                             <div className="livehistoric live">
                                 <h2>{value.nome}</h2>
                                 <h3>ÚLTIMOS LANCES</h3>
-                                {his.filter(x=> x.idGift == value.id).slice(0,5).map((bids, i) => (
+                                {his.filter(x=> x.idGift == value.id).slice(0,4).map((bids, i) => (
                                     
                                             <h4 key={i}>
-                                                
-                                                R$ {bids.valor}
+                                            {bids.apelido}   - R$ {bids.valor}
                                             </h4>
                                         ))}
 

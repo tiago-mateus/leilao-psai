@@ -37,14 +37,12 @@ color: #380204;
 
 
 .livecard-profile .live h4{
-    text-align: left;
+    text-align: center;
     font-style: normal;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 37px;
     color: #300000;
-    padding-left: 28px;
-    font-size: 30px;
 }
 
 .live-container{

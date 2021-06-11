@@ -1,20 +1,20 @@
 h1{
     color: blueviolet;
 }
-.login-container{
+.login-containerregister{
     display: flex;
     justify-content: center;
 }
 
-.form{
+.login-containerregister .form{
     display: flex;
     flex-direction: row;
     margin-top: 150px;
 }
-.card-img{
+.login-containerregister .card-img{
     overflow: hidden;
     border-radius: 8px 0px 0px 8px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 0, 0, 0.4) 0.01%, #1F0000 100%), url('../../assets/santo-antonio.jpg');
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(27, 0, 0, 0.4) 0.01%, #1F0000 100%), url('../../../assets/santo-antonio.jpg');
     background-size: cover;
     background-color: white;
     height: 500px;
@@ -24,11 +24,11 @@ h1{
     flex-direction: column;
 
 }
-.fieldPass{
+.login-containerregister .fieldPass{
     border-color: red;
     color: rgb(148, 21, 21);
 }
-.form .card-img .title{
+.login-containerregister .form .card-img .title{
     color: white;
     font-size: 35px;
     line-height: 31px;
@@ -36,7 +36,7 @@ h1{
     margin-bottom: 35px;
     margin-left: 10px;
 }
-.form .card-img .title-register{
+.login-containerregister .form .card-img .title-register{
     align-self: center;
     font-size: 16px;
     line-height: 112.9%;
@@ -46,7 +46,7 @@ h1{
 
 }
 
-.form .card-img a{
+.login-containerregister .form .card-img a{
     align-self: center;
     font-weight: bold;
     font-size: 16px;
@@ -57,7 +57,7 @@ h1{
     display: flex;
 }
 
-.form form{
+.login-containerregister .form form{
     background-color: rgb(241, 241, 241);
     height: 500px;
     width: 500px;
@@ -73,7 +73,7 @@ h1{
 
 
 
-form h1{
+.login-containerregister form h1{
     font-style: normal;
     font-weight: bold;
     font-size: 35px;
@@ -84,35 +84,35 @@ form h1{
 }
 
 
-form .formSenha input {
-    width: 210px;
+.login-containerregister form .formSenha input {
+    width: 210px !important;
 }
 
 
-form .formTelefone input {
-    width: 210px;
+.login-containerregister form .formTelefone input {
+    width: 210px !important;
 }
 
 
-form .formTelefone{
+.login-containerregister form .formTelefone{
     display: flex;
     flex-direction: row;
 }
-form .formCidadeBairro input {
-    width: 210px;
+.login-containerregister form .formCidadeBairro input {
+    width: 210px !important;
 }
 
-.endereco ,.nomecompleto{
+.login-containerregister .endereco ,.nomecompleto{
     width: 430px !important;
 }
 
 
-.formApelidoCPF input{
+.login-containerregister .formApelidoCPF input{
     width: 230px !important;
 }
-.formApelidoCPF .apelido{
+.login-containerregister .formApelidoCPF .apelido{
     width: 190px !important;
 }
-.form input[type="submit"]{
+.login-containerregister .form input[type="submit"]{
     width: 300px !important;
 }
