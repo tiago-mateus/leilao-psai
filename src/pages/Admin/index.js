@@ -2,7 +2,7 @@ import './styles.css';
 import {useHistory} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
-import { FiLogOut, FiUsers } from 'react-icons/fi';
+import { FiLogOut, FiUsers, FiYoutube } from 'react-icons/fi';
 import { FaGavel, FaTrash, FaRegEdit } from 'react-icons/fa';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
@@ -12,6 +12,8 @@ import ButtonLeiloando from '../components/ButtonLeiloando';
 
 export default function Admin() {
     const history = useHistory();
+
+
 
 
     function sair(e){
@@ -54,7 +56,10 @@ export default function Admin() {
             })
         }
 
+        
+
     }
+
 
     useEffect(() => {
 
@@ -105,11 +110,27 @@ export default function Admin() {
             })
     }
     const [show, setShow] = useState(false);
+    const [showLive, setShowLive] = useState(false);
+    const [live, setLive] = useState("");
+
     const [showUser, setShowUser] = useState(false);
     const [user, setUser] = useState([]);
 
+    function editarUrl(e) {
+        e.preventDefault();
+
+        const data = {url: live};
+
+        api.put('/liveurl', data)
+            .then(response => {
+            })
+
+            setShowLive(false);
+
+        }
+
     const handleClose = () => {
-           setShow(false);setShowUser(false);
+           setShow(false);setShowUser(false);setShowLive(false);
     }
 
     function handleShow(e, id, nome, valor) {
@@ -122,13 +143,23 @@ export default function Admin() {
 
     function handleShowUser(e, id) {
         e.preventDefault();
-        console.log(id);
         api.get('/userInfo/'+id)
             .then(response => {
                 setUser(response.data);
             })
 
         setShowUser(true);
+    }
+
+
+    function handleShowLive(e) {
+        e.preventDefault();
+        api.get('/liveurl')
+            .then(response => {
+                setLive(response.data);
+            })
+
+        setShowLive(true);
     }
 
     const ModalInfo = () =>{
@@ -185,7 +216,7 @@ export default function Admin() {
         <div className="admin-container">
             <header>
                 <Button className="btn-cadastrar-prenda" onClick={e => handleShow(e, null, null, null)} >Cadastrar prenda</Button>
-                <Link className="btn-users" to="/live" ><FiUsers size={25} color="white" /></Link>
+                <Link className="btn-users" onClick={e => handleShowLive(e)} ><FiYoutube size={25} color="white" /></Link>
                 <button type="button" onClick={e=> sair(e)}>
                     <FiLogOut size={25} color="white" />
                 </button>
@@ -202,7 +233,7 @@ export default function Admin() {
                                 <Link onClick={e => Delete(e, gift.id)}><FaTrash size={20} color="#d51e1e" /></Link>
                             </div>
                             <div className="info">
-                                <h1 title="Carneiro">{gift.nome}</h1>
+                                <h1 title="Carneiro">{gift.nome.length >= 15 ? gift.nome.substring(0,15)+"..." : gift.nome}</h1>
                                 <h1 title="Carneiro">R${gift.valorInicial}</h1>
                                 <form>
                                     <div className="inputGroup">
@@ -280,6 +311,29 @@ export default function Admin() {
                 </Modal.Header>
                    <ModalInfo/>
                 <Modal.Footer>
+                </Modal.Footer>
+            </Modal>
+
+
+
+            <Modal
+                show={showLive}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>Live</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <form>
+                        <label >URL:</label>
+                        <input type="text" placeholder="Url" value={live} onChange={e => setLive(e.target.value)} />
+                    </form>
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Cancelar</Button>
+                    <Button variant="primary" onClick={e => editarUrl(e)}>Salvar</Button>
                 </Modal.Footer>
             </Modal>
 

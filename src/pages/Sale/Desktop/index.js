@@ -29,7 +29,22 @@ export default function Sale() {
     const [his, setHis] = useState([]);
     const [valor, setValor] = useState([]);
     const [vl, setVl] = useState([]);
-    let a = null;
+    const [live, setLive] = useState("");
+
+
+
+    useEffect(() => {
+    
+    api.get('/liveurl')
+    .then(response => {
+        setLive(response.data);
+    })
+
+    console.log(live);
+}, [
+
+])
+
     useEffect(() => {
     
 
@@ -61,7 +76,6 @@ export default function Sale() {
         e.preventDefault();
 
         api.get('/maxBid/' + idGift).then(response => {
-            console.log(parseInt(valor[i]) > parseInt(response.data));
 
             if (parseInt(valor[i]) > parseInt(response.data) || response.data == "") {
                 if(parseInt(valor[i]) > valorinicial){
@@ -147,7 +161,7 @@ export default function Sale() {
             
                 <div className="live">
                     <span>Live - Leilão Virtual 2021</span>
-                <iframe  width="100%" height="100%" src="https://www.youtube.com/embed/kY6hSswesi8?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
