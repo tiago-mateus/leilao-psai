@@ -123,13 +123,13 @@ export default function Sale() {
 
                         <div className="card-profile" style={{display: 'block'}}>
                             <div className="gift">
-                                <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain'}}></div>
+                                <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain', display: 'block'}}></div>
                                 <div className="info">
-                                    <h1 title={value.nome}>{value.nome.length > 10 ? value.nome.substring(0, 10)+"..." : value.nome}</h1>
-                                    <form onSubmit={e => handleBid(e, value.id, i, value.valorInicial)}>
+                                    <h1 title={value.nome} style={{display: 'block'}} >{value.nome.length > 10 ? value.nome.substring(0, 10)+"..." : value.nome}</h1>
+                                    <form onSubmit={e => handleBid(e, value.id, i, value.valorInicial)} style={{display: 'block'}}>
                                         <div className="inputGroup">
                                   
-                                            <input placeholder="R$ 00,00" type="number" key={i} value={valor[i]} onChange={e => add(e,  i)} />
+                                            <input placeholder="R$ 00,00" type="number" key={i} value={valor[i]} onChange={e => add(e,  i)} style={{display: 'block'}} />
                                             <input value="arrematar" type="submit" /> 
                                         </div>
                                     </form>
@@ -146,9 +146,9 @@ export default function Sale() {
 
 
                                         {his.filter(x=> x.idGift == value.id).map((bids, i) => (
-                                            <tr className="lances" key={i}>
-                                                <td>{bids.apelido}</td>
-                                                <td>R$ {bids.valor}</td>
+                                            <tr className="lances" key={i} style={{display: 'block'}}>
+                                                <td style={{display: 'block'}}>{bids.apelido}</td>
+                                                <td style={{display: 'block'}}>R$ {bids.valor}</td>
                                             </tr>
                                         ))}
 
