@@ -101,6 +101,20 @@ export default function Sale() {
 
     }
 
+    const Hist = () => {
+        const data = gis;
+        return (
+
+         
+            data.map((value, i) =>(
+                <h1>Teste</h1>
+
+            ))
+
+
+        
+        );
+    }
     return (
         <div className="sale-containerMobile"  style={{display: 'block'}}>
             <header style={{display: 'block'}}>
@@ -153,9 +167,9 @@ export default function Sale() {
 
                         </div>   */}
 
-                     {gis.map((value, i) => (<h1 key={i} style={{display: 'block'}}>teste</h1>))}
-
-                     <h1 style={{display: 'block'}}>teste</h1>
+                     {/* {gis.map((value, i) => (<h1 key={i} style={{display: 'block'}}>teste</h1>))} */}
+                        <Hist/>
+                     {/* <h1 style={{display: 'block'}}>teste</h1> */}
                     {/* {gis.map((value, i) => ( 
 
                         <div className="card-profile" >
