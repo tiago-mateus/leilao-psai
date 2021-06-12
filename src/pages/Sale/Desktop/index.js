@@ -100,7 +100,7 @@ export default function Sale() {
 
 
     }
-
+    document.body.style.background = "#2f0000";
     return (
         <div className="sale-container">
             <header>

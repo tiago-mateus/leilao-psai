@@ -46,7 +46,7 @@ export default function Sale() {
 ])
     useEffect(() => {
     
-console.log("test222e");
+
         api.get('/salegift')
         .then(response => {
                 setGift(response.data);
@@ -62,7 +62,7 @@ console.log("test222e");
       
         })
 
-    }, [])
+    }, [gifts])
 
     const add = (e, index) =>{
         let newArr = [...valor]; // copying the old datas array
@@ -100,7 +100,7 @@ console.log("test222e");
 
 
     }
-
+    document.body.style.background = "#2f0000";
     return (
         <div className="sale-containerMobile">
             <header>

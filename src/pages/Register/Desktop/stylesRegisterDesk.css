@@ -1,4 +1,4 @@
-/* h1{
+h1{
     color: blueviolet;
 }
 .login-containerregister{
@@ -115,4 +115,4 @@
 }
 .login-containerregister .form input[type="submit"]{
     width: 300px !important;
-} */
+}

@@ -30,7 +30,7 @@ export default function Sale() {
 
     }, [gifts])
 
-    document.body.style.background = "unset";
+    document.body.style.background = "white";
 
     return (
 

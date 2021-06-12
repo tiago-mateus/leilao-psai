@@ -76,7 +76,7 @@ export default function Login(){
 
         setCPFValue(values.cpf);
     }
-
+    document.body.style.background = "#2f0000";
     return (
         <div className="login-containerregister">
             <section className="form">

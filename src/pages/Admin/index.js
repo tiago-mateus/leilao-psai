@@ -212,6 +212,7 @@ export default function Admin() {
 
         )
     }
+    document.body.style.background = "#2f0000";
     return (
         <div className="admin-container">
             <header>

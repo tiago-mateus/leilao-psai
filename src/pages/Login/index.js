@@ -74,6 +74,7 @@ export default function Login(){
 
     }
 
+    document.body.style.background = "#2f0000";
 
     return (
         <Container className="container-login">

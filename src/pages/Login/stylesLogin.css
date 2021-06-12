@@ -1,4 +1,6 @@
-/* 
+body{
+    background:  #2f0000;
+}
 .formLogin{
     display: flex;
     flex-direction: row;
@@ -69,4 +71,4 @@ form h1{
     color: #981E1E;
     bottom: 50px;
     position: relative;
-} */
+}
