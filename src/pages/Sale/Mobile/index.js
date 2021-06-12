@@ -120,7 +120,7 @@ export default function Sale() {
 
                 <div className="card-profile" >
                             <div className="gift">
-                                <div className="img"></div>
+                            <div className="img"></div>
                                 <div className="info">
                                     <h1>Teste</h1>
                                     <form >
