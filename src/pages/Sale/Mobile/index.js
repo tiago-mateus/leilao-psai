@@ -153,7 +153,7 @@ export default function Sale() {
 
                         </div>   */}
 
-                     {gis.map((value, i) => ( <h1 key={i} style={{display: 'block'}}>teste {value.nome}</h1>))}
+                     {gis.map((value, i) => ( <h1 key={i} style={{display: 'block'}}>teste {i}</h1>))}
 
 
                     {/* {gis.map((value, i) => ( 
