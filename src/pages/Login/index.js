@@ -5,7 +5,7 @@ import './stylesLogin.css';
 import Input from '../components/mask-cpf';
 import {Link, useHistory} from 'react-router-dom';
 import api from "../../services/api";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Container, Row, Col} from 'react-bootstrap';
 import { cpf } from 'cpf-cnpj-validator'; 
 import swal from 'sweetalert';
