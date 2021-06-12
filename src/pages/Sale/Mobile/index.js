@@ -1,4 +1,4 @@
-// import './styles.css';
+import './styles.css';
 import React, { useEffect, useState } from "react";
 import { FiLogOut } from 'react-icons/fi';
 import Historic from '../../components/Historic';
@@ -115,13 +115,13 @@ export default function Sale() {
                 <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <div className="card-container">
+                <div className="card-container" style={{display: 'block'}}>
 
 
 
                     {gis.map((value, i) => ( 
 
-                        <div className="card-profile" style={{display: 'block'}}>
+                        <div className="card-profile" >
                             <div className="gift">
                                 <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain'}}></div>
                                 <div className="info">
@@ -135,7 +135,7 @@ export default function Sale() {
                                     </form>
                                 </div>
                             </div>
-                            <div className="historic" style={{display: 'block'}}>
+                            <div className="historic">
                                 <h2>LANCES</h2>
                                 <table>
                                     <tr className="cabecalhoTR">
