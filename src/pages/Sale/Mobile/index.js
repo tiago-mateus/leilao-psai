@@ -101,37 +101,24 @@ export default function Sale() {
 
     }
 
-    const Hist = () => {
-        const data = gis;
-        return (
-
-         
-            data.map((value, i) =>(
-                <h1 style={{display: 'block'}}>Teste</h1>
-
-            ))
-
-
-        
-        );
-    }
     return (
-        <div className="sale-containerMobile"  style={{display: 'block'}}>
-            <header style={{display: 'block'}}>
-                <button type="button"  onClick={e => sair(e)} style={{display: 'block'}}>
-                    {/* <FiLogOut size={25} color="white"/> */}
+        <div className="sale-containerMobile">
+            <header>
+                <button type="button"  onClick={e => sair(e)}>
+                    <FiLogOut size={25} color="white"/>
                 </button>
             </header>
 
-            <div className="container" style={{display: 'block'}}>
-            {/* <div className="live">
+            <div className="container">
+            <div className="live">
                     <span>Live - Leilão Virtual 2021</span>
                 <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div> */}
+                </div>
 
-                <div className="card-container" style={{display: 'block'}}>
+                <div className="card-container">
 
-                {/* <div className="card-profile" >
+
+                <div className="card-profile" >
                             <div className="gift">
                             <div className="img"></div>
                                 <div className="info">
@@ -164,11 +151,7 @@ export default function Sale() {
                                 </table>
                             </div>
 
-                        </div>   */}
-
-                     {/* {gis.map((value, i) => (<h1 key={i} style={{display: 'block'}}>teste</h1>))} */}
-                        <Hist/>
-                     {/* <h1 style={{display: 'block'}}>teste</h1> */}
+                        </div>  
                     {/* {gis.map((value, i) => ( 
 
                         <div className="card-profile" >
