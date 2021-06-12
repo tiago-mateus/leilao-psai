@@ -1,4 +1,4 @@
-.sale-container{
+/* .sale-container{
     width: 100%;
     max-width: 1080px;
     padding: 0 30px;
@@ -162,7 +162,6 @@
 .card-profile form{
     background-color: unset !important; 
     height: 500px;
-    /* width: 350px; */
     border-radius: 0 8px 8px 0;
     display: -webkit-flex;
     display: flex;
@@ -173,4 +172,4 @@
     -webkit-align-items: center;
     align-items: center;
 
-}
+} */
