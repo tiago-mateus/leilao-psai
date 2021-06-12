@@ -118,7 +118,7 @@ export default function Sale() {
                 <div className="card-container">
 
 
-                <div className="card-profile" >
+                {/* <div className="card-profile" >
                             <div className="gift">
                             <div className="img"></div>
                                 <div className="info">
@@ -151,7 +151,10 @@ export default function Sale() {
                                 </table>
                             </div>
 
-                        </div>  
+                        </div>   */}
+                    {gis.map((value, i) => ( <h1>teste</h1>))}
+
+
                     {/* {gis.map((value, i) => ( 
 
                         <div className="card-profile" >
