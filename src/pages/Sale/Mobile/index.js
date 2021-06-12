@@ -102,20 +102,20 @@ export default function Sale() {
     }
 
     return (
-        <div className="sale-containerMobile">
-            <header>
-                <button type="button"  onClick={e => sair(e)}>
-                    <FiLogOut size={25} color="white"/>
+        <div className="sale-containerMobile"  style={{display: 'block'}}>
+            <header style={{display: 'block'}}>
+                <button type="button"  onClick={e => sair(e)} style={{display: 'block'}}>
+                    {/* <FiLogOut size={25} color="white"/> */}
                 </button>
             </header>
 
-            <div className="container">
+            <div className="container" style={{display: 'block'}}>
             {/* <div className="live">
                     <span>Live - Leilão Virtual 2021</span>
                 <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div> */}
 
-                <div className="card-container">
+                <div className="card-container" style={{display: 'block'}}>
 
 
                 {/* <div className="card-profile" >
@@ -153,9 +153,9 @@ export default function Sale() {
 
                         </div>   */}
 
-                     {gis.map((value, i) => ( <h1 key={i} style={{display: 'block'}}>teste</h1>))}
+                     {gis.map((value, i) => (<h1 key={i} style={{display: 'block'}}>teste</h1>))}
 
-
+                     <h1 style={{display: 'block'}}>teste</h1>
                     {/* {gis.map((value, i) => ( 
 
                         <div className="card-profile" >
