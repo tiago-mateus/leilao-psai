@@ -35,7 +35,7 @@ export default function Sale() {
 
     useEffect(() => {
     
-    api.get('/liveurl')
+    api.get('/live')
     .then(response => {
         setLive(response.data);
     })
@@ -46,7 +46,7 @@ export default function Sale() {
 ])
     useEffect(() => {
     
-
+console.log("test222e");
         api.get('/salegift')
         .then(response => {
                 setGift(response.data);
@@ -62,7 +62,7 @@ export default function Sale() {
       
         })
 
-    }, [gifts])
+    }, [])
 
     const add = (e, index) =>{
         let newArr = [...valor]; // copying the old datas array
@@ -117,42 +117,7 @@ export default function Sale() {
 
                 <div className="card-container">
 
-
-                <div className="card-profile" >
-                            <div className="gift">
-                            <div className="img"></div>
-                                <div className="info">
-                                    <h1>Teste</h1>
-                                    <form >
-                                        <div className="inputGroup">
-                                  
-                                            <input placeholder="R$ 00,00" type="number" />
-                                            <input value="arrematar" type="submit" /> 
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div className="historic">
-                                <h2>LANCES</h2>
-                                <table>
-                                    <tr className="cabecalhoTR">
-                                        <td>Nome</td>
-                                        <td>Valor</td>
-                                    </tr>
-                                    <tbody>
-
-
-                                            <tr className="lances">
-                                                <td>tste</td>
-                                                <td>R$ 10</td>
-                                            </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>  
-                    {/* {gis.map((value, i) => ( 
+                    {gis.map((value, i) => ( 
 
                         <div className="card-profile" >
                             <div className="gift">
@@ -189,9 +154,10 @@ export default function Sale() {
                                 </table>
                             </div>
 
+                            {/* <Historic id={gift.id} /> */}
                         </div>
 
-                    ))} */}
+                    ))}
 
 
                 </div>
