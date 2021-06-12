@@ -33,17 +33,8 @@ export default function Sale() {
 
 
 
-    useEffect(() => {
-    
-    api.get('/liveurl')
-    .then(response => {
-        setLive(response.data);
-    })
 
-    console.log(live);
-}, [
-    
-])
+
     useEffect(() => {
     
 
@@ -63,6 +54,23 @@ export default function Sale() {
         })
 
     }, [gifts])
+
+
+
+
+
+    useEffect(() => {
+    
+    api.get('/liveurl')
+    .then(response => {
+        setLive(response.data);
+    })
+
+    console.log(live);
+}, [
+    
+])
+   
 
     const add = (e, index) =>{
         let newArr = [...valor]; // copying the old datas array

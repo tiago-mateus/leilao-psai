@@ -82,7 +82,6 @@ export default function Login(){
                     <Col sm={3}>
                         <div className="card-img" style={width < 640 ? {height:200, width: 350, borderTopLeftRadius: 8, borderTopRightRadius: 8, borderBottomLeftRadius:0, borderBottomRightRadius:0} : null}>
                             <p className="title"><strong>Seja<br/><em>Bem-vindo</em></strong></p>
-                            <p className="title-register">Ainda não tem conta? <br/><Link to="/register">Clique aqui!</Link></p>
                         </div>
 
                     </Col>
@@ -96,6 +95,7 @@ export default function Login(){
                             value={values.cpf}
                             onChange={handleChange}
                         /> */}
+                            <p className="title-register">Ainda não tem conta? <br/><Link to="/register">Clique aqui!</Link></p>
 
                         <input className="cpf" placeholder="CPF" type="text" value={cpf} onChange={e => setCPF(e.target.value)} required/>
                         <input placeholder="Senha" type="password" value={senha} onChange={e => setSenha(e.target.value)} required/>

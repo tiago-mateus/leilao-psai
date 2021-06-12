@@ -2,7 +2,7 @@
 .livecard-profile .live{
     padding: 10px;
     margin-top: 10px;
-    background: linear-gradient(180deg, #FFFFFF 0.01%, #EDEDED 29.84%, rgba(219, 219, 219, 0) 100%);
+    background: white;
     border-radius: 10px 10px 0px 0px;
     width: 300px;
     height: 200px;
