@@ -122,25 +122,25 @@ export default function Sale() {
                     {gis.map((value, i) => ( 
 
                         <div className="card-profile" style={{display: 'block'}}>
-                            <div className="gift">
+                            <div className="gift" style={{display: 'block'}}>
                                 <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain', display: 'block'}}></div>
-                                <div className="info">
+                                <div className="info" style={{display: 'block'}}>
                                     <h1 title={value.nome} style={{display: 'block'}} >{value.nome.length > 10 ? value.nome.substring(0, 10)+"..." : value.nome}</h1>
                                     <form onSubmit={e => handleBid(e, value.id, i, value.valorInicial)} style={{display: 'block'}}>
-                                        <div className="inputGroup">
+                                        <div className="inputGroup" style={{display: 'block'}}>
                                   
                                             <input placeholder="R$ 00,00" type="number" key={i} value={valor[i]} onChange={e => add(e,  i)} style={{display: 'block'}} />
-                                            <input value="arrematar" type="submit" /> 
+                                            <input value="arrematar" type="submit" style={{display: 'block'}}/> 
                                         </div>
                                     </form>
                                 </div>
                             </div>
                             <div className="historic" style={{display: 'block'}}>
-                                <h2>LANCES</h2>
-                                <table>
-                                    <tr className="cabecalhoTR">
-                                        <td>Nome</td>
-                                        <td>Valor</td>
+                                <h2 style={{display: 'block'}}>LANCES</h2>
+                                <table style={{display: 'block'}}>
+                                    <tr className="cabecalhoTR" style={{display: 'block'}}>
+                                        <td style={{display: 'block'}}>Nome</td>
+                                        <td style={{display: 'block'}}>Valor</td>
                                     </tr>
                                     <tbody>
 
