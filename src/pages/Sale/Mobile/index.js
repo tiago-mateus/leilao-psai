@@ -118,48 +118,83 @@ export default function Sale() {
                 <div className="card-container">
 
 
-
-                    {gis.map((value, i) => ( 
-
-                        <h1 style={{display: 'block'}}>{value.nome}</h1>
-                        // <div className="card-profile" style={{display: 'block'}}>
-                        //     <div className="gift" style={{display: 'block'}}>
-                        //         <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain', display: 'block'}}></div>
-                        //         <div className="info" style={{display: 'block'}}>
-                        //             <h1 title={value.nome} style={{display: 'block'}} >{value.nome.length > 10 ? value.nome.substring(0, 10)+"..." : value.nome}</h1>
-                        //             <form onSubmit={e => handleBid(e, value.id, i, value.valorInicial)} style={{display: 'block'}}>
-                        //                 <div className="inputGroup" style={{display: 'block'}}>
+                {/* <div className="card-profile" >
+                            <div className="gift">
+                            <div className="img"></div>
+                                <div className="info">
+                                    <h1>Teste</h1>
+                                    <form >
+                                        <div className="inputGroup">
                                   
-                        //                     <input placeholder="R$ 00,00" type="number" key={i} value={valor[i]} onChange={e => add(e,  i)} style={{display: 'block'}} />
-                        //                     <input value="arrematar" type="submit" style={{display: 'block'}}/> 
-                        //                 </div>
-                        //             </form>
-                        //         </div>
-                        //     </div>
-                        //     <div className="historic" style={{display: 'block'}}>
-                        //         <h2 style={{display: 'block'}}>LANCES</h2>
-                        //         <table style={{display: 'block'}}>
-                        //             <tr className="cabecalhoTR" style={{display: 'block'}}>
-                        //                 <td style={{display: 'block'}}>Nome</td>
-                        //                 <td style={{display: 'block'}}>Valor</td>
-                        //             </tr>
-                        //             <tbody>
+                                            <input placeholder="R$ 00,00" type="number" />
+                                            <input value="arrematar" type="submit" /> 
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="historic">
+                                <h2>LANCES</h2>
+                                <table>
+                                    <tr className="cabecalhoTR">
+                                        <td>Nome</td>
+                                        <td>Valor</td>
+                                    </tr>
+                                    <tbody>
 
 
-                        //                 {his.filter(x=> x.idGift == value.id).map((bids, i) => (
-                        //                     <tr className="lances" key={i} style={{display: 'block'}}>
-                        //                         <td style={{display: 'block'}}>{bids.apelido}</td>
-                        //                         <td style={{display: 'block'}}>R$ {bids.valor}</td>
-                        //                     </tr>
-                        //                 ))}
+                                            <tr className="lances">
+                                                <td>tste</td>
+                                                <td>R$ 10</td>
+                                            </tr>
 
-                        //             </tbody>
-                        //         </table>
-                        //     </div>
+                                    </tbody>
+                                </table>
+                            </div>
 
-                        // </div>
+                        </div>   */}
+                     {gis.map((value, i) => ( <h1 key={i} style={{display: 'block'}}>teste {i}</h1>))}
 
-                    ))}
+
+                    {/* {gis.map((value, i) => ( 
+
+                        <div className="card-profile" >
+                            <div className="gift">
+                                <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain'}}></div>
+                                <div className="info">
+                                    <h1 title={value.nome}>{value.nome.length > 10 ? value.nome.substring(0, 10)+"..." : value.nome}</h1>
+                                    <form onSubmit={e => handleBid(e, value.id, i, value.valorInicial)}>
+                                        <div className="inputGroup">
+                                  
+                                            <input placeholder="R$ 00,00" type="number" key={i} value={valor[i]} onChange={e => add(e,  i)} />
+                                            <input value="arrematar" type="submit" /> 
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div className="historic">
+                                <h2>LANCES</h2>
+                                <table>
+                                    <tr className="cabecalhoTR">
+                                        <td>Nome</td>
+                                        <td>Valor</td>
+                                    </tr>
+                                    <tbody>
+
+
+                                        {his.filter(x=> x.idGift == value.id).map((bids, i) => (
+                                            <tr className="lances" key={i}>
+                                                <td>{bids.apelido}</td>
+                                                <td>R$ {bids.valor}</td>
+                                            </tr>
+                                        ))}
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    ))} */}
 
 
                 </div>
