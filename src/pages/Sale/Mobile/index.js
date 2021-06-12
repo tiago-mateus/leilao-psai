@@ -118,47 +118,10 @@ export default function Sale() {
                 <div className="card-container">
 
 
-                {/* <div className="card-profile" >
-                            <div className="gift">
-                            <div className="img"></div>
-                                <div className="info">
-                                    <h1>Teste</h1>
-                                    <form >
-                                        <div className="inputGroup">
-                                  
-                                            <input placeholder="R$ 00,00" type="number" />
-                                            <input value="arrematar" type="submit" /> 
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div className="historic">
-                                <h2>LANCES</h2>
-                                <table>
-                                    <tr className="cabecalhoTR">
-                                        <td>Nome</td>
-                                        <td>Valor</td>
-                                    </tr>
-                                    <tbody>
 
+                    {gis.map((value, i) => ( 
 
-                                            <tr className="lances">
-                                                <td>tste</td>
-                                                <td>R$ 10</td>
-                                            </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>   */}
-
-                    {gis.map((value, i) => ( <h1 key={i} style={{display: 'block'}}>teste {i}</h1>))}
-
-
-                    {/* {gis.map((value, i) => ( 
-
-                        <div className="card-profile" >
+                        <div className="card-profile" style={{display: 'block'}}>
                             <div className="gift">
                                 <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain'}}></div>
                                 <div className="info">
@@ -172,7 +135,7 @@ export default function Sale() {
                                     </form>
                                 </div>
                             </div>
-                            <div className="historic">
+                            <div className="historic" style={{display: 'block'}}>
                                 <h2>LANCES</h2>
                                 <table>
                                     <tr className="cabecalhoTR">
@@ -195,7 +158,7 @@ export default function Sale() {
 
                         </div>
 
-                    ))} */}
+                    ))}
 
 
                 </div>
