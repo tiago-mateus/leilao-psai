@@ -35,7 +35,7 @@ export default function Sale() {
 
     useEffect(() => {
     
-    api.get('/live')
+    api.get('/liveurl')
     .then(response => {
         setLive(response.data);
     })
@@ -112,7 +112,7 @@ export default function Sale() {
             <div className="container">
             <div className="live">
                     <span>Live - Leilão Virtual 2021</span>
-                <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe  width="100%" height="100%" src={live+"?autoplay=1"} title="YouTube video player" frameborder="0" allow="autoplay;"></iframe>
                 </div>
 
                 <div className="card-container">
