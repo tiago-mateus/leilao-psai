@@ -119,7 +119,7 @@ export default function Sale() {
 
                     {gis.map((value, i) => ( 
 
-                        <div className="card-profile" >
+                        <div className="card-profile" style={{display:'block'}} key={i}>
                             <div className="gift">
                                 <div className="img" style={{backgroundImage: `linear-gradient(179.84deg, rgba(255, 255, 255, 0) 38.04%, #FFFFFF 88.1%), url(${value.caminhoImg})`, backgroundSize: 'contain'}}></div>
                                 <div className="info">
@@ -144,7 +144,7 @@ export default function Sale() {
 
 
                                         {his.filter(x=> x.idGift == value.id).map((bids, i) => (
-                                            <tr className="lances" key={i}>
+                                            <tr className="lances" key={i} style={{display:'block'}}>
                                                 <td>{bids.apelido}</td>
                                                 <td>R$ {bids.valor}</td>
                                             </tr>

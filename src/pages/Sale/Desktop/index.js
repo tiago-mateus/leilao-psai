@@ -140,6 +140,9 @@ export default function Sale() {
                                     <tbody>
 
 
+                                        
+
+
                                         {his.filter(x=> x.idGift == value.id).map((bids, i) => (
                                             <tr className="lances" key={i}>
                                                 <td>{bids.apelido}</td>
