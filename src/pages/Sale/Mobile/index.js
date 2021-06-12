@@ -107,7 +107,7 @@ export default function Sale() {
 
          
             data.map((value, i) =>(
-                <h1>Teste</h1>
+                <h1 style={{display: 'block'}}>Teste</h1>
 
             ))
 
@@ -130,7 +130,6 @@ export default function Sale() {
                 </div> */}
 
                 <div className="card-container" style={{display: 'block'}}>
-
 
                 {/* <div className="card-profile" >
                             <div className="gift">
