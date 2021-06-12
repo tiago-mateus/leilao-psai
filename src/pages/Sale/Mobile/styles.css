@@ -6,7 +6,7 @@
 }
 
 .sale-containerMobile header{
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
@@ -18,15 +18,15 @@
 }
 
 .sale-containerMobile .card-container{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr !important;
     grid-gap: 24px;
-    margin-top: 20px;
+    margin-top: 20px; */
 }
 
 
 .sale-containerMobile .card-profile{
-    display: flex;
+    /* display: flex; */
 }
 
 
@@ -47,7 +47,7 @@
 
 
 .sale-containerMobile .gift .info{
-    display: flex;
+    /* display: flex; */
     width: 135px !important;
     height: 170px !important;
     background: #FFFFFF;
@@ -69,7 +69,7 @@
     width: 110px !important;
 }
 .sale-containerMobile .gift .info .inputGroup{
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
 
@@ -143,9 +143,9 @@
 }
 
 .sale-container .container{
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 24px;
+    grid-gap: 24px; */
 }
 .sale-containerMobile .live{
     width: 100%;
@@ -169,13 +169,13 @@
     background-color: unset !important; 
     height: 500px;
     border-radius: 0 8px 8px 0;
-    display: -webkit-flex;
+    /* display: -webkit-flex;
     display: flex;
     -webkit-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: center;
     justify-content: center;
     -webkit-align-items: center;
-    align-items: center;
+    align-items: center; */
 
 }
